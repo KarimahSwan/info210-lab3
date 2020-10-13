@@ -8,6 +8,12 @@ function boxes(b){
     var xoro ="O";
     for (let i=0; i< b.length; i++){
         b[i].classList.add('square');
+        b[i].onmouseover = function(){
+            b[i].classList.toggle("hover", true);
+        }   
+        b[i].onmouseout = function(){
+            b[i].classList.toggle("hover", false);
+        }
     b[i].addEventListener("click",function(){
         if(xoro === 'X'){
             xoro='O';
